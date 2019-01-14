@@ -46,7 +46,6 @@ void turnOnLight() {
       insideLightReading = analogRead(indoorPin);  
       insideLightReading = 1023 - insideLightReading;
       setLightLevel = map(insideLightReading, 0, 1023, 0, 255);
-      setLightLevel = 255 - setLightLevel;
       analogWrite(lightBulbPin, setLightLevel);
       Serial.print("setLightLevel: ");
       Serial.println(setLightLevel);
